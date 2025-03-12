@@ -42,7 +42,9 @@ A organização do projeto foi feita para facilitar a escalabilidade e modularid
 src/
 ├── assets/
 │   ├── styles/      # Arquivos CSS/SASS globais e reset
-│   └── images/      # Imagens utilizadas no projeto
+|   ├── icons/      # Arquivos CSS/SASS globais e reset
+|   ├── fonts/      # Arquivos CSS/SASS globais e reset
+│   └── img/      # Imagens utilizadas no projeto
 ├── components/      # Componentes reutilizáveis
 │   ├── navbar/      # Navbar fixa com menus e dropdowns
 │   ├── bottom/      # Botões flutuantes
