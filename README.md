@@ -1,29 +1,31 @@
-# Portal Unificado - Front-End
+Este repositório contém o front-end do Portal Unificado, desenvolvido em React. Ele foi projetado para ser modular, escalável e responsivo, facilitando a manutenção e usabilidade em diferentes dispositivos.
 
-Este repositório contém o front-end do Portal Unificado, desenvolvido em React. Ele utiliza uma estrutura modular para facilitar a manutenção, a escalabilidade e a usabilidade em diferentes telas e dispositivos.
+🚀 Tecnologias Utilizadas
+O projeto utiliza as seguintes tecnologias e componentes principais:
 
-## **🚀 Tecnologias Utilizadas**
+Tecnologia	Versão	Descrição
+React	18.2.0	Biblioteca principal para construção da interface.
+React DOM	18.2.0	Gerenciamento da renderização no DOM.
+React Router DOM	6.4.0	Gerenciamento de rotas no React.
+Bootstrap	5.2.3	Framework CSS para responsividade e layout.
+FontAwesome	6.2.1	Ícones para melhorar a interface.
+SASS	1.54.9	Pré-processador CSS para estilização customizada.
+Vite	3.2.0	Ferramenta de build rápida para desenvolvimento.
+ESLint	8.31.0	Linter para padronização de código.
+Prettier	2.8.0	Ferramenta de formatação automática de código.
+📂 Estrutura do Projeto
+A organização das pastas foi feita para garantir modularidade e escalabilidade:
 
-- **React**: Biblioteca principal para construção da interface.
-- **React Router**: Gerenciamento de rotas dinâmico.
-- **Bootstrap**: Framework CSS para estilização e responsividade.
-- **FontAwesome**: Ícones para melhorar a usabilidade e a interface.
-- **Vite**: Ferramenta de build ultrarrápida para desenvolvimento de aplicações modernas.
-- **SASS/CSS**: Para estilização customizada.
-
----
-
-## **📂 Estrutura de Pastas**
-```plaintext
+plaintext
 src/
 ├── assets/
-│   ├── styles/      # Arquivos CSS/SASS globais
-│   └── images/      # Imagens utilizadas no projeto
+│   ├── styles/      # Arquivos CSS/SASS globais e reset
+│   └── images/      # Imagens do projeto
 ├── components/      # Componentes reutilizáveis
 │   ├── navbar/      # Navbar fixa com menus e dropdowns
-│   ├── bottom/      # Botões fixos no projeto
-│   └── footer/      # Footer do portal
-├── pages/           # Páginas principais do aplicativo
+│   ├── bottom/      # Botões flutuantes
+│   └── footer/      # Rodapé do portal
+├── pages/           # Páginas principais do sistema
 │   ├── Home/        # Página inicial
 │   ├── Contribuinte/
 │   ├── Mobiliario/
@@ -31,56 +33,66 @@ src/
 │   └── Nfse/
 ├── App.jsx          # Componente principal do React
 └── main.jsx         # Ponto de entrada do aplicativo
-```
-# 📦 Dependências
-Aqui estão as dependências essenciais utilizadas no projeto. Certifique-se de instalá-las antes de rodar o aplicativo.
+📦 Pré-requisitos
+Antes de começar, verifique se você tem os seguintes pré-requisitos instalados em sua máquina:
 
-Dependências de Produção
-react: ^18.x
+Node.js (v16.20.2 ou superior)
 
-react-dom: ^18.x
+npm (v8.x ou superior)
 
-react-router-dom: ^6.x
-
-bootstrap: ^5.x
-
-@fortawesome/fontawesome-free: ^6.x
-
-sass: ^1.x
-
-Dependências de Desenvolvimento
-vite: ^4.x
-
-eslint: ^8.x
-
-eslint-plugin-react: ^7.x
-
-prettier: ^2.x
-
-# 📖 Como Configurar o Ambiente
-Clone o Repositório
+📖 Passo a Passo para Configuração
+1. Clone o Repositório
+Comece clonando este repositório em sua máquina local:
 
 bash
-git clone https://github.com/seu-usuario/portal-unificado.git
-cd portal-unificado
-Instale as Dependências Certifique-se de que o Node.js e o npm estão instalados.
+git clone https://github.com/VenturaCerqueira/Portal_Contribuinte_web.git
+cd Portal_Contribuinte_web
+2. Instale as Dependências
+Instale as dependências do projeto especificadas no arquivo package.json:
 
 bash
 npm install
-Rode o Servidor de Desenvolvimento Use o comando abaixo para iniciar o servidor.
+3. Configure a Porta do Servidor (Opcional)
+Por padrão, o servidor de desenvolvimento do Vite usará a porta 5173. Se você deseja rodar na porta 3000 como antes, edite ou crie o arquivo vite.config.js na raiz do projeto com o seguinte conteúdo:
+
+javascript
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000, // Altere a porta para 3000
+  },
+});
+4. Inicie o Servidor de Desenvolvimento
+Após configurar, inicie o servidor de desenvolvimento:
 
 bash
 npm run dev
-Acesse no Navegador Acesse o endereço local:
+Acesse o projeto no navegador:
 
-http://localhost:3000/
-
-
-🛠️ Scripts Disponíveis
-No diretório do projeto, você pode rodar os seguintes scripts:
+http://localhost:3000
+5. Scripts Disponíveis
+Aqui estão os principais scripts definidos no package.json:
 
 npm run dev: Inicia o servidor de desenvolvimento.
 
 npm run build: Gera a build otimizada para produção.
 
-npm run lint: Analisa o código e corrige problemas de formatação.
+npm run start: Executa o servidor de pré-visualização da build.
+
+npm run lint: Verifica e corrige problemas no código.
+
+
+🛠️ Solução de Problemas
+Erro: Porta Padrão do Vite Não É 3000
+Se o projeto abrir em outra porta (como 5173), altere a porta no arquivo vite.config.js como descrito acima.
+
+Erro: Caminhos de Arquivo Não Encontrados
+Verifique se os caminhos no App.jsx e outros arquivos estão corretos. Exemplo:
+
+javascript
+import "./assets/styles/global.css"; // Caminho correto
+Erro: Versão do Node.js
+Se você estiver usando o Node.js v18 ou superior e o projeto apresentar problemas, volte para o Node.js v16.20.2 (ou vice-versa) utilizando nvm ou reinstale o Node.js..
