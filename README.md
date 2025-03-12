@@ -31,7 +31,7 @@ src/
 │   └── Nfse/
 ├── App.jsx          # Componente principal do React
 └── main.jsx         # Ponto de entrada do aplicativo
-
+```
 # 📦 Dependências
 Aqui estão as dependências essenciais utilizadas no projeto. Certifique-se de instalá-las antes de rodar o aplicativo.
 
