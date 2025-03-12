@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.card-container {
+  background-color: #ffffff; /* Define o fundo como branco */
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo exclusivo do h1 dentro do card */
+.card-container h1 {
+  font-size: 3rem; /* Tamanho maior */
+  font-weight: bold;
+  background: linear-gradient(135deg, #0052cc, #007bff); /* Gradiente */
+  -webkit-background-clip: text; /* Gradiente aplicado no texto */
+  -webkit-text-fill-color: transparent; /* Fundo transparente */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  line-height: 1.2; /* Altura da linha */
+}
+
+/* Parágrafos no card */
+.card-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+/* Imagem no card */
+.card-container img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 15px;
+  }
+
+  .card-container h1 {
+    font-size: 2.5rem; /* Reduz tamanho em telas menores */
+  }
+
+  .card-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container h1 {
+    font-size: 2rem; /* Reduz ainda mais para dispositivos muito pequenos */
+  }
+
+  .card-container p {
+    font-size: 0.8rem;
+  }
+}
