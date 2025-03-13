@@ -4,7 +4,7 @@ import '../../assets/styles/TopAccessibilityBar.css';
 
 const TopAccessibilityBar = () => {
   const changeFontSize = (action) => {
-    // Lógica de acessibilidade para alterar tamanhos de fonte
+   
     console.log(`Alterar tamanho da fonte: ${action}`);
   };
 

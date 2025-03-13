@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-xl custom-navbar">
       <div className="container">
-        {/* Botão para colapsar o menu em dispositivos menores */}
+        
         <button
           className="navbar-toggler"
           type="button"

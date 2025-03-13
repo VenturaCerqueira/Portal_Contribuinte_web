@@ -1,133 +1,68 @@
-/* Centraliza todo o conteúdo na tela */
-.cnd-container {
+.emissao-cnd-container {
+  padding: 20px;
+}
+
+.emissao-cnd-title {
+  font-size: 24px;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+.emissao-cnd-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.emissao-button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #004494;
+}
+
+.emissao-button-icon {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .emissao-cnd-form {
     flex-direction: column;
-    align-items: start; 
+    gap: 15px;
+  }
+
+  .emissao-button-group {
+    flex-direction: row;
+    gap: 8px;
     justify-content: center;
-    padding-top: 40px;
-    padding-left: 90px; 
   }
-  
-  /* Título azul, com destaque */
-  .cnd-title {
-    color: #0052cc;
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-  }
-  
-  /* Formulário centralizado */
-  .cnd-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    background: #f8f8f8;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: max-content;
-  }
-  
-  .cnd-form button {
-    background-color: #0052cc;
-    color: white;
-    padding: 14px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 16px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  }
-  
-  /* Animação ao passar o mouse */
-  button:hover {
-    animation: hoverAnimation 0.5s forwards;
-  }
-  
-  /* Animação para o botão */
-  @keyframes hoverAnimation {
-    0% {
-      transform: scale(1);
-      background-color: #4CAF50;
-    }
-    50% {
-      transform: scale(1.1);
-      background-color: #45a049;
-    }
-    100% {
-      transform: scale(1);
-      background-color: #4CAF50;
-    }
-  }
-  
-  /* CSS para os botões */
-  .action-btn {
-    background-color: #4CAF50;  /* Cor de fundo verde */
-    color: white;  /* Cor do texto */
-    font-size: 16px;
-    padding: 12px 24px;  /* Espaçamento interno */
-    margin: 10px;  /* Espaçamento entre os botões */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;  /* Alinha o ícone com o texto */
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;  /* Efeitos de transição */
-  }
-  
-  .action-btn:hover {
-    background-color: #45a049;  /* Cor de fundo no hover */
-    transform: scale(1.05);  /* Aumenta o botão ao passar o mouse */
-  }
-  
-  .button-icon {
-    margin-right: 8px;  /* Espaçamento entre o ícone e o texto */
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;  /* Centraliza os botões */
-    gap: 10px;  /* Espaçamento entre os botões */
-  }
-  
-  .emitir-btn {
-    background-color: #007bff; /* Cor de fundo azul */
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .emitir-btn:hover {
-    background-color: #0056b3;  /* Cor de fundo azul escuro no hover */
-    transform: scale(1.05);  /* Aumenta o botão ao passar o mouse */
-  }
-  
-  /* Estilo para o botão ou input de nome */
-  input[disabled] {
-    background-color: #f0f0f0;  /* Cor de fundo suave */
-    border: 1px solid #ccc; /* Borda sutil */
-    color: #555;  /* Cor do texto */
-    font-size: 16px;  /* Tamanho do texto */
-    padding: 10px 15px;  /* Espaçamento interno */
-    width: 250px;  /* Largura do campo */
-    margin-left: 10px;  /* Espaçamento do lado do CPF/CNPJ */
-    border-radius: 5px;  /* Bordas arredondadas */
-    cursor: not-allowed;  /* Mostrar que o campo está desabilitado */
-    transition: background-color 0.3s ease; /* Efeito suave de transição */
-  }
-  
-  input[disabled]:hover {
-    background-color: #e0e0e0; /* Mudança na cor ao passar o mouse */
-  }
-  
+}

@@ -28,8 +28,7 @@ import Via_2_itiv from './pages/Imobiliario/2_via_itvi';
 
 
 // Estilos globais
-import '../src/assets/styles/global.css';
-import '../src/assets/styles/reset.css';
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
